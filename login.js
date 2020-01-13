@@ -1,5 +1,5 @@
 const express = require("express")
-const knex = require("./knex.js")
+const knex = require("./model/knex.js")
 const path = require("path")
 const bodyParser=require('body-parser')
 const app = express()
@@ -7,12 +7,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.get('/login',(req,res)=>{
-    res.sendFile(path.join(__dirname+'/login.html'));
+    res.sendFile(path.join(__dirname+'/view/login.html'));
 });
 
 
 app.get('/products',(req,res)=>{
-    res.sendFile(path.join(__dirname+'/secondPage.html'));
+    res.sendFile(path.join(__dirname+'/view/secondPage.html'));
 });
 
 
@@ -46,7 +46,6 @@ app.post('/app_products',(req,res)=>{
     })
 })
 
-// app.put('/upda')
 
 app.listen(3000, function () {
     console.log('server is listening port 3000.....');
