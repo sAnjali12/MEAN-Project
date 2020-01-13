@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+    <div ng-app="">
+        <h1>Product List</h1>
+        <form action="app_products" method="POST">
+            <p>image:<input type="text" ng-model="image" required></p>
+            <p>name:<input type="text" ng-model="name" required></p>
+            <p>categories:<input type="text" ng-model="categories" required></p>
+            <p>price:<input type="number" ng-model="price" required></p>
+            
+            <h5>image: {{image}}</h5>
+            <h5>name: {{name}}</h5>
+            <h5>categories:{{categories}}</h5>
+            <h5>price:{{price}}</h5>
+
+            <input type="submit" value="submit">
+            <h4>if you want to updata and delete somethings click here:</h4>
+            <a href="http://localhost:3000/products">UPDATE</a>:
+            <a href="http://localhost:3000/products">DELETE</a>:
+           
+        </form>
+    </div>
+    </body>
+</html>   
+
